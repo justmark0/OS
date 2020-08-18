@@ -1,0 +1,30 @@
+   90  ls -a
+   91  git checkout master
+   92  git status
+   93  cd ~/
+   94  ls -a
+   95  mkdir ~/week1
+   96  cd ~/week1/
+   97  touch ex1.txt
+   98  sudo apt-get gcc
+   99  sudo apt-get install gcc
+  100  sl
+  101  ls
+  102  find . -name '*gcc*'
+  103  find . -name '*'
+  104  find /usr/bin -name '*gcc*'
+  105  find /usr/bin -name '*gcc*' | sort -r
+  106  ls
+  107  rm ex1.txt 
+  108  find /usr/bin -name '*gcc*' | sort -r > ex1.txt
+  109  cat ex1.txt 
+  110  cd ..
+  111  cd ~/OS/OS
+  112  mkdir week1
+  113  cd week1/
+  114  ls -a
+  115  find /usr/bin -name '*gcc*' | sort -r > ex1.txt
+  116  cat ex1.txt `
+  117  cat ex1.txt 
+  118  history
+  119  history 30 > ex2.txt
