@@ -9,10 +9,10 @@ int main() {
         n = fork();
     
         if (n < 0)
-          continue; // if some error appeard  just skip this iteration 
+          continue; // if some error will appeard program will just skip this iteration 
         else if (n > 0) // condition for parent process 
           printf("Hello from parent [PID - %d]\n", n);
-        else // itf it is greater than 0 it is child
+        else // if it is greater than 0 it means that it is a child process
           printf("Hello from child [PID - %d]\n", n);
     }
   return 0;
