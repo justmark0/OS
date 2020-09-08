@@ -2,8 +2,10 @@
 #include <unistd.h>
 
 int main() {
-   char str[100];
-   scanf("%s", &str);
-   system(str);
+   while(1){
+      char str[100];
+      scanf("%s", &str);
+      system(str);
+   }
    return 0;
 }
