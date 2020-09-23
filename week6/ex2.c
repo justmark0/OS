@@ -33,7 +33,7 @@ void SJN(int arrival_time[], int burst_time[]){
     for(int i = 0 ; i < num_of_proc; i++){
         total_waiting += waiting_time[i];
         total_TAT += turn_around_time[i];
-        printf("Processor %d:\nBurst time: %d\nArrival time: %d\nWaiting time: %d\nTurnaround time: %d\n"
+        printf("process %d:\nBurst time: %d\nArrival time: %d\nWaiting time: %d\nTurnaround time: %d\n"
                "Completion time: %d\n\n", i + 1, burst_time[i], arrival_time[i], waiting_time[i],turn_around_time[i],
                completion_time[i]);
     }
@@ -43,10 +43,10 @@ void SJN(int arrival_time[], int burst_time[]){
 
 
 int main() {
-    printf("Enter number of processors:\n");
+    printf("Enter number of processes:\n");
     scanf("%d", &num_of_proc);
     int arrival_time[num_of_proc], burst_time[num_of_proc];
-    printf("Enter arrival_time and burst_time for each processor:\n");
+    printf("Enter arrival_time and burst_time for each process:\n");
     for(int i = 0; i < num_of_proc; i++){
         scanf("%d %d", &arrival_time[i], &burst_time[i]);
     }
@@ -58,41 +58,41 @@ int main() {
  *
  * Input:
  * 3 proc
- * First processor:
+ * First process:
  *  arrival_time = 0
  *  burst_time = 10
  *
- *  Second processor:
+ *  Second process:
  *  arrival_time = 7
  *  burst_time = 9
  *
- *  Third processor:
+ *  Third process:
  *  arrival_time = 4
  *  burst_time = 2
  *
  * Output:
  *
- * Processor 1:
+ * process 1:
  * Burst time: 10
  * Arrival time: 0
  * Waiting time: 2
  * Turnaround time: 12
  * Completion time: 12
- * 
- * Processor 2:
+ *
+ * process 2:
  * Burst time: 9
  * Arrival time: 7
  * Waiting time: 5
  * Turnaround time: 14
  * Completion time: 21
- * 
- * Processor 3:
+ *
+ * process 3:
  * Burst time: 2
  * Arrival time: 4
  * Waiting time: 0
  * Turnaround time: 2
  * Completion time: 6
- * 
+ *
  * Average Waiting time: 2.333333
  * Average Average Turnaround time: 9.333333
  *

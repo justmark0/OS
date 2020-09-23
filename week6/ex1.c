@@ -18,8 +18,8 @@ void FCFS(int arrival_time[], int burst_time[]){
         total_waiting += waiting_time[i];
         total_TAT += turn_around_time[i];
         int completion_time = turn_around_time[i] + arrival_time[i];
-        printf("Processor %d:\nBurst time: %d\nArrival time: %d\nWaiting time: %d\nTurnaround time: %d\n"
-        "Completion time: %d\n\n", i + 1, burst_time[i], arrival_time[i], waiting_time[i],turn_around_time[i], completion_time);
+        printf("process %d:\nBurst time: %d\nArrival time: %d\nWaiting time: %d\nTurnaround time: %d\n"
+               "Completion time: %d\n\n", i + 1, burst_time[i], arrival_time[i], waiting_time[i],turn_around_time[i], completion_time);
     }
     printf("Average Waiting time: %lf\n", (double)total_waiting/(double)num_of_proc);
     printf("Average Average Turnaround time: %lf", (double)total_TAT/(double)num_of_proc);
@@ -27,10 +27,10 @@ void FCFS(int arrival_time[], int burst_time[]){
 
 
 int main() {
-    printf("Enter number of processors:\n");
+    printf("Enter number of processes:\n");
     scanf("%d", &num_of_proc);
     int arrival_time[num_of_proc], burst_time[num_of_proc];
-    printf("Enter arrival_time and burst_time for each processor:\n");
+    printf("Enter arrival_time and burst_time for each process:\n");
     for(int i = 0; i < num_of_proc; i++){
         scanf("%d %d", &arrival_time[i], &burst_time[i]);
     }
@@ -39,32 +39,45 @@ int main() {
 }
 
 /*
+ *
  * Input:
- *  2 proc
- *  First processor:
+ * 3 proc
+ * First process:
  *  arrival_time = 0
  *  burst_time = 10
  *
- *  First processor:
+ *  Second process:
  *  arrival_time = 7
  *  burst_time = 9
  *
+ *  Third process:
+ *  arrival_time = 4
+ *  burst_time = 2
+ *
  * Output:
- *  Processor 1:
+ *
+ *  process 1:
  *  Burst time: 10
  *  Arrival time: 0
  *  Waiting time: 0
  *  Turnaround time: 10
  *  Completion time: 10
  *
- *  Processor 2:
+ *  process 2:
  *  Burst time: 9
  *  Arrival time: 7
  *  Waiting time: 3
  *  Turnaround time: 12
  *  Completion time: 19
  *
- *  Average Waiting time: 1.500000
- *  Average Average Turnaround time: 11.000000
+ *  process 3:
+ *  Burst time: 2
+ *  Arrival time: 4
+ *  Waiting time: 15
+ *  Turnaround time: 17
+ *  Completion time: 21
+ *
+ *  Average Waiting time: 6.000000
+ *  Average Average Turnaround time: 13.000000
+ *
  */
-
