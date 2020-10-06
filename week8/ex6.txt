@@ -1,0 +1,4 @@
+if machine 16 virtual adresses then it will have 2^16 bytes in a byte addressable machine
+If pages are 8K then it will borrow 2^13 bytes. 
+
+So machine need (2^(16-13) = 8) 8 entries in a single-level linear page table.

@@ -1,0 +1,5 @@
+What is the difference between a physical and
+a virtual address?
+
+Physical address cover hardware address in physical memory.
+Virtual address belong to the virtual space used by the process and it's mapped to physical addresses.
