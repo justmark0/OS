@@ -1,0 +1,15 @@
+touch _ex3.txt
+No output
+chmod -x _ex3.txt
+No output
+chmod ou+xwr _ex3.txt
+No output
+chmod g=u _ex3.txt
+No output
+
+- What does 660 mean for ex3.txt?
+Ownerand group can read and write
+– What does 775 mean for ex3.txt?
+All users can execute and read, owner can write also
+– What does 777 mean for ex3.txt?
+All users can read write execute

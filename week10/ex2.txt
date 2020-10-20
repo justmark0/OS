@@ -1,0 +1,11 @@
+link ~/stuff/OS/OS/week01/file.txt _ex2.txt
+No Output
+ls -i ~/stuff/OS/OS/week01/file.txt
+Output:
+9966661 /home/mark/stuff/OS/OS/week01/file.txt
+find ~/stuff/OS/OS/week01/file.txt -inum 9966661
+Output:
+/home/mark/stuff/OS/OS/week01/file.txt
+find ~/stuff/OS/OS/week01/file.txt -inum 9966661 -exec rm {} \;
+No output
+
