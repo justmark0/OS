@@ -1,0 +1,16 @@
+For a 10MB file:
+regular copy: 0.202s
+copy with a 10 times larger buffer: 0.096s
+copy synced: 28.584s
+copy with a 10 times larger buffer, synced: 3.128s
+
+For a 1MB file:
+regular copy: 0.012s
+copy with a 10 times larger buffer: 0.012s
+copy synced: 0.115s
+copy with a 10 times larger buffer, synced: 0.115s
+
+Results:
+- increasing size of file execution time increases
+- increasing the size of the buffer decreases execution time because it makes less I/O calls
+- syncing the copying causes a significant increase of execution time due to the overhead of synchronised
